@@ -566,6 +566,10 @@ section {
   margin-right: 0;
 }
 
+#img-pequena{
+  width: 178px;
+}
+
 .portfolio .portfolio-wrap {
   transition: 0.3s;
   position: relative;
