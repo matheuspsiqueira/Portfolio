@@ -738,14 +738,6 @@ section {
   font-size: 18px;
 }
 
-.services .title a {
-  color: #343a40;
-}
-
-.services .title a:hover {
-  color: #149ddd;
-}
-
 .services .description {
   margin-left: 80px;
   line-height: 24px;
