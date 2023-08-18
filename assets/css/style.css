@@ -635,6 +635,23 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
+#margem{
+  height: 300px;
+  margin-top: 15px;
+  background-color: #040b14;
+  color: #f4f6fd;
+}
+
+#ajuste{
+  text-align: justify;
+  padding-right: 390px;
+}
+
+#ajuste-img{
+  width: 500px;
+  margin-left: 100px;
+}
+
 .portfolio-details {
   padding-top: 40px;
 }
