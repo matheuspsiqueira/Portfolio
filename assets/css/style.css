@@ -898,6 +898,12 @@ section {
   padding-left: 50px;
 }
 
+@media (max-width: 1024px){
+  .gif-contato{
+    padding-left: 25px;
+  }
+}
+
 .contact .info {
   padding: 30px;
   background: #fff;
