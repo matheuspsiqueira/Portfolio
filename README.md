@@ -19,6 +19,7 @@ Este portfólio reúne projetos de diferentes categorias, incluindo:
 
 - Desenvolvimento de sites e aplicações web.
 - Criação de designs gráficos para marketing e divulgação.
+- Animações em CSS
 
 ## Como Explorar:
 
