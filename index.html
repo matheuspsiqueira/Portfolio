@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus Siqueira — Backend / Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-lang="en">
+    <div class="grid-bg"></div>
+    <div class="wrap">
+    
+    <nav>
+        <div class="route">GET <span>/matheus</span></div>
+        <ul class="nav-links">
+        <li><a href="#experience" class="en">experience</a><a href="#experience" class="pt">experiência</a></li>
+        <li><a href="#projects" class="en">projects</a><a href="#projects" class="pt">projetos</a></li>
+        <li><a href="#skills" class="en">skills</a><a href="#skills" class="pt">habilidades</a></li>
+        <li class="resume-dd">
+            <button class="cta" onclick="toggleResumeMenu('nav')">
+            <span class="en">resume</span><span class="pt">currículo</span> ↓
+            </button>
+            <div class="menu" id="resume-menu-nav">
+            <a href="assets/resume-en.pdf" download>English <small>PDF</small></a>
+            <a href="assets/resume-pt.pdf" download>Português <small>PDF</small></a>
+            </div>
+        </li>
+        <li>
+            <div class="lang-toggle">
+            <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+            <button id="btn-pt" onclick="setLang('pt')">PT</button>
+            </div>
+        </li>
+        </ul>
+    </nav>
+    
+    <header class="hero">
+        <div class="status-line">
+        <span class="dot"></span>
+        <span class="en">200 OK · open to work · Rio de Janeiro, BR (remote-friendly)</span>
+        <span class="pt">200 OK · disponível para oportunidades · Rio de Janeiro, BR (aberto a remoto)</span>
+        </div>
+        <h1>
+        <span class="en">Matheus Siqueira<br><span class="accent">builds backend systems</span> that hold up.</span>
+        <span class="pt">Matheus Siqueira<br><span class="accent">constrói sistemas de backend</span> sólidos e confiáveis.</span>
+        </h1>
+        <p class="role-line">
+        <span class="en">Backend Developer <span class="sep">·</span> Python <span class="sep">·</span> Django <span class="sep">·</span> REST APIs</span>
+        <span class="pt">Desenvolvedor Backend <span class="sep">·</span> Python <span class="sep">·</span> Django <span class="sep">·</span> APIs REST</span>
+        </p>
+    
+        <div class="response-block">
+        <div class="bar"><span>response · application/json</span><span class="ok">● 200</span></div>
+        <pre>{
+    <span class="k">"focus"</span>: <span class="s">"backend & full-stack web development"</span>,
+    <span class="k">"stack"</span>: [<span class="s">"Python"</span>, <span class="s">"Django"</span>, <span class="s">"PostgreSQL"</span>, <span class="s">"JavaScript"</span>],
+    <span class="k">"currently_learning"</span>: [<span class="s">"AWS"</span>, <span class="s">"cybersecurity fundamentals"</span>]
+    }</pre>
+        <div class="note">
+            <span class="en">// code stays in English — it's the language the work speaks</span>
+            <span class="pt">// o bloco de código fica em inglês — é a língua do trabalho em si</span>
+        </div>
+        </div>
+    
+        <div class="hero-actions">
+        <div class="resume-dd">
+            <button class="btn primary" onclick="toggleResumeMenu('hero')">
+            <span class="en">Download résumé</span><span class="pt">Baixar currículo</span> ↓
+            </button>
+            <div class="menu" id="resume-menu-hero">
+            <a href="assets/resume-en.pdf" download>English <small>PDF</small></a>
+            <a href="assets/resume-pt.pdf" download>Português <small>PDF</small></a>
+            </div>
+        </div>
+        <a href="#" class="btn">GitHub ↗</a>
+        <a href="#" class="btn">LinkedIn ↗</a>
+        </div>
+    </header>
+    
+    <section id="experience">
+        <div class="route-label">GET /experience <span class="status">200 OK</span></div>
+        <h2 class="section-title">
+        <span class="en">Where I've worked</span><span class="pt">Onde eu trabalhei</span>
+        </h2>
+        <p class="section-sub">
+        <span class="en">Two years turning internal operations problems into working software.</span>
+        <span class="pt">Dois anos transformando problemas operacionais internos em software funcional.</span>
+        </p>
+    
+        <div class="log-entry">
+        <time>2024 — 2026</time>
+        <div>
+            <h3><span class="en">IT Support Assistant</span><span class="pt">Assistente de Suporte em TI</span></h3>
+            <span class="co">Eletrodata Engenharia</span>
+            <ul class="en">
+            <li>Built a corporate intranet system from scratch using Django — auth, access control, internal comms</li>
+            <li>Wrote Python automations that cut manual document processing time across 100+ employees</li>
+            <li>Administered Active Directory and kept Windows/Linux environments running</li>
+            </ul>
+            <ul class="pt">
+            <li>Desenvolveu um sistema de intranet corporativa do zero usando Django — autenticação, controle de acesso e comunicação interna</li>
+            <li>Criou automações em Python que reduziram o tempo de processamento manual de documentos para mais de 100 colaboradores</li>
+            <li>Administrou o Active Directory e manteve ambientes Windows/Linux em funcionamento</li>
+            </ul>
+        </div>
+        </div>
+    
+        <div class="log-entry">
+        <time>2024</time>
+        <div>
+            <h3><span class="en">IT Intern</span><span class="pt">Estagiário de TI</span></h3>
+            <span class="co">Eletrodata Engenharia</span>
+            <ul class="en">
+            <li>Handled support tickets and infrastructure basics — the foundation everything else was built on</li>
+            </ul>
+            <ul class="pt">
+            <li>Atendeu chamados de suporte e cuidou da infraestrutura básica — a base sobre a qual tudo o resto foi construído</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="route-label">GET /projects <span class="status">200 OK</span></div>
+        <h2 class="section-title">
+        <span class="en">What I've built</span><span class="pt">O que eu construí</span>
+        </h2>
+        <p class="section-sub">
+        <span class="en">Real systems, shipped and used — not tutorials.</span>
+        <span class="pt">Sistemas reais, usados de verdade — não tutoriais.</span>
+        </p>
+    
+        <div class="featured-grid">
+        <div class="fcard">
+            <div class="thumb">[ screenshot ]</div>
+            <div class="body">
+            <span class="tag en">IN PROGRESS</span><span class="tag pt">EM ANDAMENTO</span>
+            <h3>Bancou</h3>
+            <p class="en">App with PDF processing and AI-powered structured data extraction, integrated with the Claude API.</p>
+            <p class="pt">App com processamento de PDFs e extração de dados estruturados via IA, integrado com a API da Claude.</p>
+            </div>
+        </div>
+        <div class="fcard">
+            <div class="thumb">[ screenshot ]</div>
+            <div class="body">
+            <span class="tag">DJANGO REST · REACT NATIVE</span>
+            <h3>AppUnited</h3>
+            <p class="en">REST API with JWT authentication, built to serve a companion mobile application.</p>
+            <p class="pt">API REST com autenticação JWT, construída para servir uma aplicação mobile complementar.</p>
+            </div>
+        </div>
+        <div class="fcard">
+            <div class="thumb">[ screenshot ]</div>
+            <div class="body">
+            <span class="tag">DJANGO</span>
+            <h3><span class="en">Corporate Intranet</span><span class="pt">Intranet Corporativa</span></h3>
+            <p class="en">Internal platform for announcements, documents, and access control, used company-wide.</p>
+            <p class="pt">Plataforma interna para avisos, documentos e controle de acesso, usada por toda a empresa.</p>
+            </div>
+        </div>
+        <div class="fcard">
+            <div class="thumb"><img src="assets/casamento.png" alt="casamento"></div>
+            <div class="body">
+            <span class="tag">DJANGO · MERCADO PAGO</span>
+            <h3><span class="en">Wedding Website</span><span class="pt">Site de Casamento</span></h3>
+            <p class="en">Custom site with payment integration, deployed and hosted on a self-managed VPS.</p>
+            <p class="pt">Site personalizado com integração de pagamento, hospedado em uma VPS auto-gerenciada.</p>
+            <button class="case-link" onclick="openModal('wedding')">
+                <span class="en">Read case study →</span><span class="pt">Ler case study →</span>
+            </button>
+            </div>
+        </div>
+        </div>
+    
+        <div class="lab-intro">
+        <h3><span class="en">Other projects &amp; labs</span><span class="pt">Outros projetos e laboratórios</span></h3>
+        <p class="en">Smaller builds, study projects, and security CTF write-ups — where a lot of the actual learning happened.</p>
+        <p class="pt">Projetos menores, exercícios de estudo e resoluções de CTFs de segurança — onde boa parte do aprendizado real aconteceu.</p>
+        </div>
+    
+        <div class="lab-grid">
+        <div class="lcard">
+            <span class="ltag en">Web · Django</span><span class="ltag pt">Web · Django</span>
+            <h4>Kings Men's</h4>
+            <p class="en">E-commerce style store built with Django to practice models, cart logic, and admin flows.</p>
+            <p class="pt">Loja no estilo e-commerce construída com Django para praticar models, carrinho e fluxo de admin.</p>
+        </div>
+        <div class="lcard">
+            <span class="ltag en">Web</span><span class="ltag pt">Web</span>
+            <h4><span class="en">Recipe App</span><span class="pt">Receitas Supremas</span></h4>
+            <p class="en">CRUD web app for browsing and managing recipes.</p>
+            <p class="pt">Aplicação web com CRUD para navegar e gerenciar receitas.</p>
+        </div>
+        <div class="lcard">
+            <span class="ltag en">Web</span><span class="ltag pt">Web</span>
+            <h4>MoviesLib</h4>
+            <p class="en">Movie catalog app consuming an external API.</p>
+            <p class="pt">Catálogo de filmes consumindo uma API externa.</p>
+        </div>
+        <div class="lcard">
+            <span class="ltag en">Security · CTF</span><span class="ltag pt">Segurança · CTF</span>
+            <h4>Pickle Rick</h4>
+            <p class="en">Write-up of a web-exploitation CTF challenge — enumeration to privilege escalation.</p>
+            <p class="pt">Write-up de um desafio CTF de exploração web — da enumeração até a escalação de privilégio.</p>
+        </div>
+        <div class="lcard">
+            <span class="ltag en">Security · CTF</span><span class="ltag pt">Segurança · CTF</span>
+            <h4>FowSniff</h4>
+            <p class="en">CTF write-up focused on credential hunting and service enumeration.</p>
+            <p class="pt">Write-up de CTF focado em busca de credenciais e enumeração de serviços.</p>
+        </div>
+        <div class="lcard">
+            <span class="ltag en">JavaScript · Game</span><span class="ltag pt">JavaScript · Jogo</span>
+            <h4>Mario Jump</h4>
+            <p class="en">Small browser game built to practice vanilla JS logic and game loops.</p>
+            <p class="pt">Jogo simples no navegador para praticar lógica em JS puro e game loop.</p>
+        </div>
+        <div class="lcard">
+            <span class="ltag en">Web · UI</span><span class="ltag pt">Web · UI</span>
+            <h4><span class="en">Login Screen</span><span class="pt">Tela de Login</span></h4>
+            <p class="en">UI/UX study — building an authentication screen from a design reference.</p>
+            <p class="pt">Estudo de UI/UX — construção de uma tela de autenticação a partir de uma referência de design.</p>
+        </div>
+        <div class="lcard">
+            <span class="ltag en">Web</span><span class="ltag pt">Web</span>
+            <h4>Mill S.A.</h4>
+            <p class="en">Institutional site built for a fictional/practice company brief.</p>
+            <p class="pt">Site institucional construído a partir de um briefing fictício/de prática.</p>
+        </div>
+        <div class="lcard">
+            <span class="ltag en">Archive</span><span class="ltag pt">Arquivo</span>
+            <h4><span class="en">Previous Portfolio</span><span class="pt">Portfólio Antigo</span></h4>
+            <p class="en">An earlier version of this portfolio — kept as a record of progress.</p>
+            <p class="pt">Uma versão anterior deste portfólio — mantida como registro de evolução.</p>
+        </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="route-label">GET /skills <span class="status">200 OK</span></div>
+        <h2 class="section-title">
+        <span class="en">Toolbox</span><span class="pt">Ferramentas</span>
+        </h2>
+    
+        <div class="skill-groups">
+        <div class="skill-group">
+            <h4><span class="en">Backend</span><span class="pt">Backend</span></h4>
+            <div class="pills">
+            <span class="pill">Python</span>
+            <span class="pill">Django</span>
+            <span class="pill">DRF</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">SQLite</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h4><span class="en">Frontend</span><span class="pt">Frontend</span></h4>
+            <div class="pills">
+            <span class="pill">JavaScript</span>
+            <span class="pill">React.js</span>
+            <span class="pill">HTML/CSS</span>
+            <span class="pill">Bootstrap</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h4><span class="en">Infra &amp; Ops</span><span class="pt">Infra e Operações</span></h4>
+            <div class="pills">
+            <span class="pill">Linux</span>
+            <span class="pill en">VPS Deployment</span><span class="pill pt">Deploy em VPS</span>
+            <span class="pill">Git</span>
+            <span class="pill">Active Directory</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h4><span class="en">Currently learning</span><span class="pt">Estudando agora</span></h4>
+            <div class="pills">
+            <span class="pill learning">AWS (EC2 · S3 · RDS)</span>
+            <span class="pill learning en">Security fundamentals</span><span class="pill learning pt">Fundamentos de segurança</span>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="route-label" style="justify-content:center;">POST /contact <span class="status" style="margin-left:8px;">200 OK</span></div>
+        <h2><span class="en">Let's talk.</span><span class="pt">Vamos conversar.</span></h2>
+        <p class="en">Open to backend and full-stack roles — Brazil-based, open to remote and relocation.</p>
+        <p class="pt">Aberto a vagas de backend e full-stack — baseado no Brasil, aberto a remoto e realocação.</p>
+        <div class="contact-links">
+        <a href="mailto:matheuspontessiqueira@gmail.com" class="btn primary">
+            <span class="en">Email me</span><span class="pt">Enviar email</span>
+        </a>
+        <a href="#" class="btn">LinkedIn ↗</a>
+        <a href="#" class="btn">GitHub ↗</a>
+        </div>
+        <div class="foot-note">
+        <span class="en">// built by Matheus Siqueira — status: online</span>
+        <span class="pt">// construído por Matheus Siqueira — status: online</span>
+        </div>
+    </footer>
+    
+    </div>
+    <div class="modal-overlay" id="modal-wedding" onclick="if(event.target===this) closeModal('wedding')">
+    <div class="modal-box">
+        <div class="modal-top">
+        <span>GET /projects/wedding-website</span>
+        <button class="modal-close" onclick="closeModal('wedding')">✕ <span class="en">close</span><span class="pt">fechar</span></button>
+        </div>
+        <div class="modal-content">
+        <span class="m-tag en">CASE STUDY · JUL 2025</span><span class="m-tag pt">CASE STUDY · JUL 2025</span>
+        <h2><span class="en">Wedding Website</span><span class="pt">Site de Casamento</span></h2>
+        <p class="m-sub en">A fully functional personal project — live in production, actually used for a real wedding.</p>
+        <p class="m-sub pt">Projeto pessoal 100% funcional — em produção real, usado de fato em um casamento.</p>
+    
+        <h4 class="en">The problem</h4><h4 class="pt">O problema</h4>
+        <p class="en">Needed a guest platform for the wedding — RSVP, a gift registry with real payments, and event info — without relying on rigid third-party templates.</p>
+        <p class="pt">Era necessária uma plataforma para os convidados do casamento — confirmação de presença, lista de presentes com pagamento real e informações do evento — sem depender de templates rígidos de terceiros.</p>
+    
+        <h4 class="en">What it does</h4><h4 class="pt">O que o sistema faz</h4>
+        <ul class="en">
+            <li><b>Interactive gift registry</b> — gifts managed through an admin panel with automatic stock control; each gift can only be purchased once, with real-time payment via Mercado Pago.</li>
+            <li><b>Secure payment flow</b> — guest is routed through an intermediate page, and payment status updates automatically after confirmation.</li>
+            <li><b>RSVP system</b> — guests confirm attendance, stored in the database and reviewed through a private dashboard.</li>
+            <li><b>Message wall</b> — guests can leave messages for the couple.</li>
+            <li><b>Countdown &amp; geolocation map</b> — countdown to the big day, plus an interactive map for the venue.</li>
+        </ul>
+        <ul class="pt">
+            <li><b>Lista de presentes interativa</b> — presentes gerenciados via painel administrativo com controle automático de estoque; cada presente só pode ser comprado uma vez, com pagamento em tempo real pela API do Mercado Pago.</li>
+            <li><b>Fluxo de pagamento seguro</b> — o convidado é direcionado a uma página intermediária, e o status do pagamento é atualizado automaticamente após a confirmação.</li>
+            <li><b>Confirmação de presença</b> — convidados confirmam presença, armazenada no banco e revisada em um painel privado.</li>
+            <li><b>Mural de mensagens</b> — convidados podem deixar mensagens para os noivos.</li>
+            <li><b>Contador regressivo e mapa</b> — contagem para o grande dia, além de mapa interativo com geolocalização do local.</li>
+        </ul>
+    
+        <h4 class="en">Architecture &amp; deployment</h4><h4 class="pt">Arquitetura e deploy</h4>
+        <p class="en">Django backend with SQLite in development and PostgreSQL in production. Deployed on a self-managed Linux VPS, served with Nginx as the web server and Gunicorn as the WSGI server — the same deployment pattern used in professional production environments.</p>
+        <p class="pt">Backend em Django com SQLite em desenvolvimento e PostgreSQL em produção. Deploy em uma VPS Linux auto-gerenciada, servido com Nginx como servidor web e Gunicorn como servidor WSGI — o mesmo padrão de deploy usado em ambientes de produção profissionais.</p>
+    
+        <h4 class="en">Stack</h4><h4 class="pt">Stack</h4>
+        <div class="modal-stack">
+            <span>Django</span><span>Python</span><span>PostgreSQL</span><span>SQLite</span>
+            <span>JavaScript</span><span>HTML5/CSS3</span><span>Nginx</span><span>Gunicorn</span>
+            <span>Mercado Pago API</span><span class="en">Linux VPS</span><span class="pt">VPS Linux</span>
+        </div>
+    
+        <div class="modal-links">
+            <a href="https://github.com/matheuspsiqueira/Casamento-Django" class="btn primary">GitHub ↗</a>
+            <a href="#" class="btn en">Live site ↗</a><a href="#" class="btn pt">Site no ar ↗</a>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+    <script>
+    function setLang(lang){
+        document.body.setAttribute('data-lang', lang);
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    }
+    function toggleResumeMenu(which){
+        const id = 'resume-menu-' + which;
+        document.querySelectorAll('.resume-dd .menu').forEach(m => {
+        if(m.id !== id) m.classList.remove('open');
+        });
+        document.getElementById(id).classList.toggle('open');
+    }
+    document.addEventListener('click', function(e){
+        if(!e.target.closest('.resume-dd')){
+        document.querySelectorAll('.resume-dd .menu').forEach(m => m.classList.remove('open'));
+        }
+    });
+    function openModal(name){
+        document.getElementById('modal-' + name).classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal(name){
+        document.getElementById('modal-' + name).classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    </script>
+</body>
+</html>
