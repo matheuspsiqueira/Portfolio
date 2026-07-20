@@ -82,7 +82,7 @@
     background:transparent; border:none; color:var(--slate); cursor:pointer; transition:.2s;
   }
   .lang-toggle button.active{ background:var(--cyan); color:var(--ink); }
-  @media (max-width:640px){ .nav-links > li{ display:none; } }
+  @media (max-width:640px){ .nav-links li.nav-text-link{ display:none; } }
 
   /* HERO */
   header.hero{ padding:90px 0 70px; }

@@ -16,9 +16,9 @@
     <nav>
         <div class="route">GET <span>/matheus</span></div>
         <ul class="nav-links">
-        <li><a href="#experience" class="en">experience</a><a href="#experience" class="pt">experiência</a></li>
-        <li><a href="#projects" class="en">projects</a><a href="#projects" class="pt">projetos</a></li>
-        <li><a href="#skills" class="en">skills</a><a href="#skills" class="pt">habilidades</a></li>
+        <li class="nav-text-link"><a href="#experience" class="en">experience</a><a href="#experience" class="pt">experiência</a></li>
+        <li class="nav-text-link"><a href="#projects" class="en">projects</a><a href="#projects" class="pt">projetos</a></li>
+        <li class="nav-text-link"><a href="#skills" class="en">skills</a><a href="#skills" class="pt">habilidades</a></li>
         <li class="resume-dd">
             <button class="cta" onclick="toggleResumeMenu('nav')">
             <span class="en">resume</span><span class="pt">currículo</span> ↓
@@ -142,13 +142,14 @@
         <div class="fcard">
             <div class="thumb"></div>
             <div class="body">
-            <span class="tag">DJANGO REST · REACT NATIVE</span>
+            <span class="tag en">IN PROGRESS</span><span class="tag pt">EM ANDAMENTO</span>
+            <!-- <span class="tag">DJANGO REST · REACT NATIVE</span> -->
             <h3>AppUnited</h3>
             <p class="en">REST API with JWT authentication, built to serve a companion mobile application.</p>
             <p class="pt">API REST com autenticação JWT, construída para servir uma aplicação mobile complementar.</p>
-            <button class="case-link" onclick="openModal('appunited')">
+            <!-- <button class="case-link" onclick="openModal('appunited')">
                 <span class="en">Read case study →</span><span class="pt">Ler case study →</span>
-            </button>
+            </button> -->
             </div>
         </div>
         <div class="fcard">
@@ -191,13 +192,13 @@
             <p class="pt">Loja no estilo e-commerce construída com Django para praticar models, carrinho e fluxo de admin.</p>
         </div>
         <div class="lcard">
-            <span class="ltag en">Web</span><span class="ltag pt">Web</span>
+            <span class="ltag en">Web · Django</span><span class="ltag pt">Web · Django</span>
             <h4><span class="en">Recipe App</span><span class="pt">Receitas Supremas</span></h4>
             <p class="en">CRUD web app for browsing and managing recipes.</p>
             <p class="pt">Aplicação web com CRUD para navegar e gerenciar receitas.</p>
         </div>
         <div class="lcard">
-            <span class="ltag en">Web</span><span class="ltag pt">Web</span>
+            <span class="ltag en">Web · React.js</span><span class="ltag pt">Web · React.js</span>
             <h4>MoviesLib</h4>
             <p class="en">Movie catalog app consuming an external API.</p>
             <p class="pt">Catálogo de filmes consumindo uma API externa.</p>
@@ -221,7 +222,7 @@
             <p class="pt">Jogo simples no navegador para praticar lógica em JS puro e game loop.</p>
         </div>
         <div class="lcard">
-            <span class="ltag en">Web · UI</span><span class="ltag pt">Web · UI</span>
+            <span class="ltag en">Web · React.js</span><span class="ltag pt">Web · React.js</span>
             <h4><span class="en">Login Screen</span><span class="pt">Tela de Login</span></h4>
             <p class="en">UI/UX study — building an authentication screen from a design reference.</p>
             <p class="pt">Estudo de UI/UX — construção de uma tela de autenticação a partir de uma referência de design.</p>
@@ -316,7 +317,7 @@
         <h2><span class="en">Wedding Website</span><span class="pt">Site de Casamento</span></h2>
         <p class="m-sub en">A fully functional personal project — live in production, actually used for a real wedding.</p>
         <p class="m-sub pt">Projeto pessoal 100% funcional — em produção real, usado de fato em um casamento.</p>
-
+ 
         <div class="modal-gallery">
             <img src="assets/casamento.png" alt="Wedding website — home page" onclick="openLightbox(this.src)">
             <img src="assets/casamento2.png" alt="Wedding website — gift registry" onclick="openLightbox(this.src)">
@@ -356,12 +357,11 @@
     
         <div class="modal-links">
             <a href="https://github.com/matheuspsiqueira/Casamento-Django" class="btn primary">GitHub ↗</a>
-            <a href="#" class="btn en">Live site ↗</a><a href="#" class="btn pt">Site fora do ar↗</a>
         </div>
         </div>
     </div>
     </div>
-
+ 
     <div class="modal-overlay" id="modal-intranet" onclick="if(event.target===this) closeModal('intranet')">
     <div class="modal-box">
         <div class="modal-top">
@@ -373,15 +373,15 @@
         <h2><span class="en">Corporate Intranet</span><span class="pt">Intranet Corporativa</span></h2>
         <p class="m-sub en">An internal platform built during my time at Eletrodata Engenharia, used company-wide.</p>
         <p class="m-sub pt">Uma plataforma interna construída durante minha passagem pela Eletrodata Engenharia, usada por toda a empresa.</p>
-
+ 
         <div class="modal-gallery">
             <img src="assets/Intranet.jpeg" alt="Intranet — home page" onclick="openLightbox(this.src)">
         </div>
-
+ 
         <h4 class="en">The problem</h4><h4 class="pt">O problema</h4>
         <p class="en">The company had no central place for internal announcements, documents, or communication — information was scattered across email threads and physical notices.</p>
         <p class="pt">A empresa não tinha um lugar central para avisos, documentos ou comunicação interna — as informações ficavam espalhadas entre e-mails e avisos físicos.</p>
-
+ 
         <h4 class="en">What it does</h4><h4 class="pt">O que o sistema faz</h4>
         <ul class="en">
             <li><b>Announcements &amp; documents</b> — centralized hub for company-wide news, files, and onboarding material.</li>
@@ -395,25 +395,25 @@
             <li><b>Integração de status dos sistemas</b> — conectada a sistemas internos via API para notificar automaticamente a equipe sobre indisponibilidades.</li>
             <li><b>Painel administrativo</b> — a equipe interna gerencia o conteúdo sem mexer em código.</li>
         </ul>
-
+ 
         <h4 class="en">Architecture &amp; deployment</h4><h4 class="pt">Arquitetura e deploy</h4>
         <p class="en">Django backend with a Bootstrap and JavaScript frontend, built from scratch and deployed internally at the company. Data persisted with PostgreSQL.</p>
         <p class="pt">Backend em Django com frontend em Bootstrap e JavaScript, construído do zero e implantado internamente na empresa. Dados persistidos com PostgreSQL.</p>
-
+ 
         <h4>Stack</h4>
         <div class="modal-stack">
             <span>Django</span><span>Python</span><span>PostgreSQL</span>
             <span>JavaScript</span><span>Bootstrap</span><span>REST API</span>
             <span>Active Directory</span>
         </div>
-
+ 
         <div class="modal-links">
             <a href="https://github.com/matheuspsiqueira/Intranet-Eletrodata" class="btn primary">GitHub ↗</a>
         </div>
         </div>
     </div>
     </div>
-
+ 
     <div class="modal-overlay" id="modal-appunited" onclick="if(event.target===this) closeModal('appunited')">
     <div class="modal-box">
         <div class="modal-top">
@@ -425,17 +425,17 @@
         <h2>AppUnited</h2>
         <p class="m-sub en">Backend API built to power a mobile-first application, focused on secure auth and clean endpoint design.</p>
         <p class="m-sub pt">API de backend construída para dar suporte a uma aplicação mobile-first, com foco em autenticação segura e design limpo de endpoints.</p>
-
+ 
         <div class="modal-gallery">
             <img src="assets/appunited-1.png" alt="AppUnited — app screen" onclick="openLightbox(this.src)">
             <img src="assets/appunited-2.png" alt="AppUnited — app screen" onclick="openLightbox(this.src)">
             <img src="assets/appunited-3.png" alt="AppUnited — app screen" onclick="openLightbox(this.src)">
         </div>
-
+ 
         <h4 class="en">The problem</h4><h4 class="pt">O problema</h4>
         <p class="en">The client-facing mobile/web application needed a secure, well-structured backend to handle users, authentication, and data — built to be consumed cleanly by a separate frontend team.</p>
         <p class="pt">A aplicação mobile/web voltada ao cliente precisava de um backend seguro e bem estruturado para lidar com usuários, autenticação e dados — construído para ser consumido de forma limpa por uma equipe de frontend separada.</p>
-
+ 
         <h4 class="en">What it does</h4><h4 class="pt">O que o sistema faz</h4>
         <ul class="en">
             <li><b>JWT authentication</b> — secure token-based login and session handling.</li>
@@ -449,17 +449,17 @@
             <li><b>API estruturada</b> — endpoints organizados para consumo previsível e simples pelo cliente mobile.</li>
             <li><b>Integração com o frontend</b> — também contribuiu no lado cliente, usando React Native e JavaScript para consumir a API.</li>
         </ul>
-
+ 
         <h4 class="en">Architecture</h4><h4 class="pt">Arquitetura</h4>
         <p class="en">Backend built with Django REST Framework, exposing JWT-authenticated endpoints consumed by a React Native mobile client.</p>
         <p class="pt">Backend construído com Django REST Framework, expondo endpoints autenticados via JWT consumidos por um cliente mobile em React Native.</p>
-
+ 
         <h4>Stack</h4>
         <div class="modal-stack">
             <span>Django REST Framework</span><span>Python</span><span>JWT</span>
             <span>React Native</span><span>JavaScript</span><span>PostgreSQL</span>
         </div>
-
+ 
         <div class="modal-links">
             <a href="#" class="btn primary">GitHub ↗</a>
         </div>
@@ -471,7 +471,7 @@
         <button class="lightbox-close" onclick="closeLightbox()">✕ <span class="en">close</span><span class="pt">fechar</span></button>
         <img id="lightbox-img" src="" alt="">
     </div>
-
+ 
     <script>
     function setLang(lang){
         document.body.setAttribute('data-lang', lang);
