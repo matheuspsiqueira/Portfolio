@@ -19,10 +19,9 @@
   }
   ::selection{ background:var(--cyan); color:var(--ink); }
 
-  /* i18n toggle: default = English. body[data-lang="pt"] flips it. */
-  .pt{ display:none; }
-  body[data-lang="pt"] .en{ display:none; }
-  body[data-lang="pt"] .pt{ display:revert; }
+  .pt{ display:none !important; }
+  body[data-lang="pt"] .en{ display:none !important; }
+  body[data-lang="pt"] .pt{ display:revert !important; }
 
   .grid-bg{
     position:fixed; inset:0; z-index:0; pointer-events:none;
@@ -269,6 +268,33 @@
   .modal-content .m-tag{
     font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--amber); margin-bottom:10px; display:block;
   }
+  .modal-gallery{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:22px;
+  }
+  .modal-gallery img{
+    width:100%; height:190px; object-fit:cover; display:block;
+    border-radius:6px; border:1px solid var(--line);
+    cursor:pointer; transition:opacity .2s, border-color .2s;
+  }
+  .modal-gallery img:hover{ opacity:.85; border-color:var(--cyan); }
+  @media (max-width:520px){ .modal-gallery{ grid-template-columns:1fr; } .modal-gallery img{ height:220px; } }
+
+  /* LIGHTBOX */
+  .lightbox{
+    display:none; position:fixed; inset:0; z-index:70; background:rgba(6,11,20,0.92);
+    align-items:center; justify-content:center; padding:40px 20px; cursor:zoom-out;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{
+    max-width:100%; max-height:90vh; border-radius:6px; border:1px solid var(--line);
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+  }
+  .lightbox-close{
+    position:absolute; top:22px; right:28px; background:none; border:1px solid var(--line);
+    color:var(--paper-dim); border-radius:4px; padding:7px 13px; cursor:pointer;
+    font-family:'IBM Plex Mono', monospace; font-size:13px;
+  }
+  .lightbox-close:hover{ border-color:var(--cyan); color:var(--cyan); }
   .modal-content h2{ font-family:'Space Grotesk',sans-serif; font-size:1.5rem; margin-bottom:6px; }
   .modal-content .m-sub{ color:var(--paper-dim); font-size:.92rem; margin-bottom:22px; }
   .modal-content h4{
