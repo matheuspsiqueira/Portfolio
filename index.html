@@ -135,12 +135,15 @@
     
         <div class="featured-grid">
         <div class="fcard">
-            <div class="thumb"></div>
+            <div class="thumb"><img src="assets/bancou banner.png" alt="Bancou"></div>
             <div class="body">
-            <span class="tag en">IN PROGRESS</span><span class="tag pt">EM ANDAMENTO</span>
+            <span class="tag en">REACT NATIVE . DJANGO . DRF</span><span class="tag pt">REACT NATIVE . DJANGO . DRF</span>
             <h3>Bancou</h3>
-            <p class="en">App with PDF processing and AI-powered structured data extraction, integrated with the Claude API.</p>
-            <p class="pt">App com processamento de PDFs e extração de dados estruturados via IA, integrado com a API da Claude.</p>
+            <p class="en">Gamified Android app for Brazilian civil-service exam prep. Django REST API, React Native client, and an AI pipeline that turns exam PDFs into structured questions.</p>
+            <p class="pt">App Android gamificado para estudo de concursos públicos. API REST em Django, app em React Native e um pipeline de IA que transforma PDFs de provas em questões estruturadas.</p>
+            <button class="case-link" onclick="openModal('bancou')">
+                <span class="en">Read case study →</span><span class="pt">Ler case study →</span>
+            </button>
             </div>
         </div>
         <div class="fcard">
@@ -264,6 +267,8 @@
             <div class="pills">
             <span class="pill">JavaScript</span>
             <span class="pill">React.js</span>
+            <span class="pill">Expo</span>
+            <span class="pill">React Native</span>
             <span class="pill">HTML/CSS</span>
             <span class="pill">Bootstrap</span>
             </div>
@@ -409,6 +414,78 @@
  
         <div class="modal-links">
             <a href="https://github.com/matheuspsiqueira/Intranet-Eletrodata" class="btn primary">GitHub ↗</a>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-bancou" onclick="if(event.target===this) closeModal('bancou')">
+    <div class="modal-box">
+        <div class="modal-top">
+        <span>GET /projects/bancou</span>
+        <button class="modal-close" onclick="closeModal('bancou')">✕ <span class="en">close</span><span class="pt">fechar</span></button>
+        </div>
+        <div class="modal-content">
+        <span class="m-tag">CASE STUDY · 2026</span>
+        <h2>Bancou</h2>
+        <p class="m-sub en">A gamified mobile app for civil-service exam prep, built end-to-end: API, mobile client, content pipeline, monetization, and Play Store release.</p>
+        <p class="m-sub pt">Um app mobile gamificado para estudo de concursos, construído de ponta a ponta: API, app, pipeline de conteúdo, monetização e publicação na Play Store.</p>
+
+        <div class="modal-gallery">
+            <img src="assets/bancou1.jpeg" alt="Bancou — home" onclick="openLightbox(this.src)">
+            <img src="assets/bancou2.jpeg" alt="Bancou — match" onclick="openLightbox(this.src)">
+            <img src="assets/bancou3.jpeg" alt="Bancou — achievements" onclick="openLightbox(this.src)">
+        </div>
+
+        <h4 class="en">The problem</h4><h4 class="pt">O problema</h4>
+        <p class="en">Studying for Brazilian public exams means grinding through thousands of past-exam questions, which is repetitive and easy to abandon. Existing question banks are built for volume, not for keeping people coming back.</p>
+        <p class="pt">Estudar para concursos significa resolver milhares de questões de provas anteriores, o que é repetitivo e fácil de abandonar. Os bancos de questões existentes priorizam volume, não o hábito de voltar todo dia.</p>
+
+        <h4 class="en">What it does</h4><h4 class="pt">O que o sistema faz</h4>
+        <ul class="en">
+            <li><b>Match-based study</b> — 10-question rounds from real exams, filterable by exam board, subject, or specific exam, with an optional 60s timer.</li>
+            <li><b>Game layer</b> — XP, coins, lives, daily streak with milestone rewards, daily challenges, Steam-style achievements, and an item shop with consumable buffs (eliminate 2 options, skip question).</li>
+            <li><b>Rewarded ads with server-side verification</b> — extra lives are only granted after Google's signed callback (ECDSA, one-time token, daily cap), so the client can't fake a reward.</li>
+            <li><b>AI-assisted content pipeline</b> — exam PDFs are parsed with the Claude API into structured JSON and land in a Django admin review queue (pending / approved / rejected, with low-confidence flags) before reaching players.</li>
+            <li><b>Account lifecycle</b> — mandatory email verification, password recovery, and a public account-deletion page, as required by Google Play.</li>
+        </ul>
+        <ul class="pt">
+            <li><b>Estudo em partidas</b> — rodadas de 10 questões de provas reais, filtráveis por banca, matéria ou concurso, com cronômetro opcional de 60s.</li>
+            <li><b>Camada de jogo</b> — XP, moedas, vidas, streak diário com recompensas por marco, desafios diários, conquistas estilo Steam e loja de itens com buffs consumíveis (eliminar 2 alternativas, pular questão).</li>
+            <li><b>Anúncios premiados com verificação no servidor</b> — vidas extras só são creditadas após o callback assinado do Google (ECDSA, token de uso único, limite diário), então o cliente não consegue forjar a recompensa.</li>
+            <li><b>Pipeline de conteúdo com IA</b> — PDFs de provas são processados com a API da Claude em JSON estruturado e caem numa fila de revisão no Django admin (pendente / aprovada / rejeitada, com alerta de baixa confiança) antes de chegar aos jogadores.</li>
+            <li><b>Ciclo de vida da conta</b> — verificação de e-mail obrigatória, recuperação de senha e página pública de exclusão de conta, exigida pelo Google Play.</li>
+        </ul>
+
+        <h4 class="en">Architecture &amp; engineering decisions</h4><h4 class="pt">Arquitetura e decisões de engenharia</h4>
+        <ul class="en">
+            <li><b>Server is the source of truth</b> — the answer key is never sent to the client; grading, XP, coins, and lives are all computed and stored on the backend.</li>
+            <li><b>Idempotent match flow</b> — each answered question is locked per match, and rewards are stored on the match record, so retries or double-taps can't duplicate rewards.</li>
+            <li><b>Abuse protection</b> — scoped rate limiting on sensitive endpoints and a restricted CORS policy.</li>
+            <li><b>Repo security audit</b> — full git history (79 commits) scanned for leaked secrets before launch; environment variables documented in a <code>.env.example</code>.</li>
+            <li><b>Single-line environment switches</b> for ads (test vs. production), so test devices never generate invalid clicks on real ads.</li>
+        </ul>
+        <ul class="pt">
+            <li><b>Servidor como fonte da verdade</b> — o gabarito nunca vai para o cliente; correção, XP, moedas e vidas são calculados e gravados no backend.</li>
+            <li><b>Fluxo de partida idempotente</b> — cada questão respondida é travada por partida e as recompensas ficam gravadas no registro da partida, então retentativas ou toques duplos não geram recompensa em dobro.</li>
+            <li><b>Proteção contra abuso</b> — rate limiting por escopo em endpoints sensíveis e política de CORS restrita.</li>
+            <li><b>Auditoria de segurança do repositório</b> — histórico git completo (79 commits) varrido atrás de segredos antes do lançamento; variáveis de ambiente documentadas em um <code>.env.example</code>.</li>
+            <li><b>Chaves de ambiente em uma linha</b> para anúncios (teste vs. produção), evitando cliques inválidos nos aparelhos de teste em anúncios reais.</li>
+        </ul>
+
+        <h4 class="en">Release</h4><h4 class="pt">Publicação</h4>
+        <p class="en">Android release managed through Google Play Console (Data Safety, content rating, closed testing track) with builds produced via Expo EAS. Ads through AdMob. Currently in closed testing.</p>
+        <p class="pt">Publicação Android gerenciada pelo Google Play Console (Segurança dos dados, classificação de conteúdo, trilha de testes fechados) com builds gerados via Expo EAS. Anúncios via AdMob. Atualmente em teste fechado.</p>
+
+        <h4>Stack</h4>
+        <div class="modal-stack">
+            <span>Python</span><span>Django</span><span>DRF</span><span>PostgreSQL</span>
+            <span>React Native</span><span>Expo / EAS</span><span>JavaScript</span>
+            <span>Claude API</span><span>AdMob (SSV)</span><span>Google Play Console</span>
+        </div>
+
+        <div class="modal-links">
+            <a href="https://bancou.app.br" class="btn primary">Site ↗</a>
         </div>
         </div>
     </div>
